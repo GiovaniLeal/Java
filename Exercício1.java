@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main{
  
-  public static void Vetores (String[]args) {
+  public static void main(String[]args) {
     Scanner entradas = new Scanner (System.in);  
     
     //Menu Inicial 
