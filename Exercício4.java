@@ -17,16 +17,24 @@ public class Main {
         float precoVenda;
         float lucro = 0;
         float porcentagem =0;
+        float totalCusto =0;
+        float totalVenda= 0;
+         int i  =0;
+        //Loop de repetição para armazenar 3 produtos. 
+       
+        for( ; i < 3; i++){
+            System.out.print("Insira o nome do produto : ");
+            nomeProduto = entrada.next();
+            System.out.print ("Insira o preço de custo :");
+            precoCusto = entrada.nextFloat();
+            System.out.print("Insira o preço de venda : ");
+            precoVenda = entrada.nextFloat();
+
         
-        //Loop de repetição para calcular 3 produtos 
+        //Armazenar entradas para calculo de média.
         
-        for(int i =0; i < 3; i++){
-        System.out.print("Insira o nome do produto : ");
-        nomeProduto = entrada.next();
-        System.out.print ("Insira o preço de custo :");
-        precoCusto = entrada.nextFloat();
-        System.out.print("Insira o preço de venda : ");
-        precoVenda = entrada.nextFloat();
+        totalVenda = totalVenda + precoVenda;
+        totalCusto = totalCusto + precoCusto;
         
         /* CACULO DA MARGEM DE LUCRO
           *Levei em consideração a diferença entre lucro e margem de 
@@ -35,6 +43,7 @@ public class Main {
         
          lucro = precoVenda - precoCusto ;
          porcentagem = (lucro/precoVenda) *100;
+         
          
          //Validação de saidas    
         if (precoCusto > precoVenda){
@@ -53,9 +62,15 @@ public class Main {
                 System.out.println("===============================");
                 System.out.println("Não obteve lucro e nem prejuizo.");
                 System.out.println("===============================");}
-        
-        
+ 
         }
+        
+        //Media de vendas 
+        
+        System.out.println("A média do preço de Custo é de " +(totalCusto/i));
+        System.out.println("A média do preço de Venda é de " +(totalVenda/i));
+        
+        
 }
     
 }
